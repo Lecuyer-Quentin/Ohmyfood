@@ -1,0 +1,70 @@
+.loader-page{
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:$light-blue;
+    position: fixed;
+    z-index: 3;
+    animation: loader .5s ease-in-out;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;    
+
+    &__container{
+        width: 75vw;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $dark-blue;
+        img{
+            margin-top: 2vh;
+        }
+        & .loading {
+            margin: .5em;
+            span{
+            display: inline-block;
+            vertical-align: middle;
+            width: 1.6em;
+            height: 1.6em;
+            margin: .15em;
+            background: $gradient-color;
+            border-radius: 1em;
+            animation: loading 1.5s infinite alternate-reverse;
+            &:nth-of-type(2){
+                background: $primary-color;
+                animation-delay: .2s;
+            }
+            &:nth-of-type(3){
+                background: $primary-light-color;
+                animation-delay: .4s;
+            }
+            &:nth-of-type(4){
+                background: $secondary-color;
+                animation-delay: .6s;
+            }
+            &:nth-of-type(5){
+                background: $light-green;
+                animation-delay: .8s;
+
+            }
+            &:nth-of-type(6){
+                background: $dark-green;
+                animation-delay: 1s;
+            }
+            &:nth-of-type(7){
+                background: $light-blue;
+                animation-delay: 1.2s;
+            }
+        }
+        
+   }
+   & .loading-text {
+    animation: loadingColor 5s ease-in-out infinite;
+}
+}
+
+}
